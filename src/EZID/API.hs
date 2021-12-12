@@ -24,6 +24,7 @@ import qualified Data.Text.Encoding as TE
 import Data.Time.Clock (getCurrentTime)
 import qualified Network.HTTP.Client as HC
 import Network.HTTP.Types (methodGet, methodPut, methodPost)
+import Network.HTTP.Types.Status (statusCode)
 import Network.URI (URI)
 import qualified Text.XML.Light as XML
 
@@ -83,7 +84,9 @@ ezidCall path method body = do
     , HC.requestBody = HC.RequestBodyLBS $ B.toLazyByteString $ ANVL.encode body
     } (fmap P.eitherResult . httpParse ANVL.parse)
   let r' = join $ left (show :: HC.HttpException -> String) r
-  focusIO $ logMsg t $ toLogStr ("ezid: " <> method <> " " <> path <> ": ") <> toLogStr (either id show r)
+  focusIO $ logMsg t $ toLogStr ("ezid: " <> method <> " " <> path <> ": ") <> toLogStr (either id show r')
+  putStrLn $ "ezidCall response status: " ++ (show $ statusCode $ responseStatus response)
+  putStrLn $ "ezidCall response body: " ++ (show $ responseBody response)
   return $ rightJust r'
 
 ezidCheck :: ANVL.ANVL -> Maybe T.Text
