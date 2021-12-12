@@ -83,7 +83,7 @@ ezidCall path method body = do
     , HC.requestBody = HC.RequestBodyLBS $ B.toLazyByteString $ ANVL.encode body
     } (fmap P.eitherResult . httpParse ANVL.parse)
   let r' = join $ left (show :: HC.HttpException -> String) r
-  focusIO $ logMsg t $ toLogStr ("ezid: " <> method <> " " <> path <> ": ") <> toLogStr (either id show r')
+  focusIO $ logMsg t $ toLogStr ("ezid: " <> method <> " " <> path <> ": ") <> toLogStr (r)
   return $ rightJust r'
 
 ezidCheck :: ANVL.ANVL -> Maybe T.Text
