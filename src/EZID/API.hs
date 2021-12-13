@@ -85,8 +85,6 @@ ezidCall path method body = do
     } (fmap P.eitherResult . httpParse ANVL.parse)
   let r' = join $ left (show :: HC.HttpException -> String) r
   focusIO $ logMsg t $ toLogStr ("ezid: " <> method <> " " <> path <> ": ") <> toLogStr (either id show r')
-  putStrLn $ "ezidCall response status: " ++ (show $ statusCode $ responseStatus r)
-  putStrLn $ "ezidCall response body: " ++ (show $ responseBody r)
   return $ rightJust r'
 
 ezidCheck :: ANVL.ANVL -> Maybe T.Text
