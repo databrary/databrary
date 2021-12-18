@@ -88,7 +88,7 @@ ezidCall path method body = do
   return $ rightJust r'
 
 ezidCheck :: ANVL.ANVL -> Maybe T.Text
-ezidCheck = lookup "success"
+ezidCheck = lookup "OK"
 
 ezidStatus :: EZIDM Bool
 ezidStatus =
