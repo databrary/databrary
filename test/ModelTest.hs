@@ -634,8 +634,7 @@ test_16 = ignoreTest $ localOption (mkTimeout (10 * 10^(6 :: Int))) $
 
 -------- ezid --------------
 test_register_volume_with_ezid :: TestTree
-test_register_volume_with_ezid = ignoreTest
-    localOption (mkTimeout (15 * 10^(6 :: Int))) $
+test_register_volume_with_ezid = ignoreTest $ localOption (mkTimeout (15 * 10^(6 :: Int))) $
     Test.stepsWithResourceAndTransaction "register volume with ezid" $ \step ist cn2 -> do
         step "Given an authorized investigator"
         (aiAcct, aiCtxt) <- addAuthorizedInvestigatorWithInstitution' cn2
