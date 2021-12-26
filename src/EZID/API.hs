@@ -24,6 +24,7 @@ import qualified Data.Text.Encoding as TE
 import Data.Time.Clock (getCurrentTime)
 import qualified Network.HTTP.Client as HC
 import Network.HTTP.Types (methodGet, methodPut, methodPost)
+import Network.HTTP.Types.Status (statusCode)
 import Network.URI (URI)
 import qualified Text.XML.Light as XML
 
@@ -87,11 +88,11 @@ ezidCall path method body = do
   return $ rightJust r'
 
 ezidCheck :: ANVL.ANVL -> Maybe T.Text
-ezidCheck = lookup "success"
+ezidCheck = lookup "OK"
 
 ezidStatus :: EZIDM Bool
 ezidStatus =
-  isJust . (ezidCheck =<<) <$> ezidCall "/status" methodGet []
+  isJust . (ezidCheck =<<) <$> ezidCall "/heartbeat" methodGet []
 
 data EZIDMeta
   = EZIDPublic
@@ -113,9 +114,9 @@ ezidCreate :: BS.ByteString -> EZIDMeta -> EZIDM (Maybe BS.ByteString)
 ezidCreate hdl meta = do
   ns <- peeks ezidNS
   fmap (TE.encodeUtf8 . T.takeWhile (\c -> c /= '|' && not (isSpace c))) . (=<<) (T.stripPrefix "doi:" <=< ezidCheck) <$>
-    ezidCall ("/id/" <> ns <> hdl) methodPut (ezidMeta meta)
+    ezidCall "/dois" methodPost (ezidMeta meta)
 
 ezidModify :: BS.ByteString -> EZIDMeta -> EZIDM Bool
 ezidModify hdl meta =
   isJust . (ezidCheck =<<) <$>
-    ezidCall ("/id/doi:" <> hdl) methodPost (ezidMeta meta)
+      ezidCall ("/dois/" <> hdl) methodPut (ezidMeta meta)

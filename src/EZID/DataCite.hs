@@ -33,9 +33,9 @@ data DataCite = DataCite
 dataCiteXML :: DataCite -> XML.Element
 dataCiteXML DataCite{..} =
   "resource" <=>
-    [ "xmlns" =. "http://datacite.org/schema/kernel-3"
+    [ "xmlns" =. "http://datacite.org/schema/kernel-4"
     , XML.Attr (q "xsi"){ XML.qPrefix = Just "xmlns" } "http://www.w3.org/2001/XMLSchema-instance"
-    , XML.Attr (q "schemaLocation"){ XML.qPrefix = Just "xsi" } "http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd"
+    , XML.Attr (q "schemaLocation"){ XML.qPrefix = Just "xsi" } "http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.4/metadata.xsd"
     ] $ catMaybes
     [ Just $ "identifier" <=>
       ("identifierType" =. "DOI")
