@@ -81,9 +81,9 @@ Nix Cache - [<img src="https://img.shields.io/uptimerobot/status/m780713505-7d8d
 
 We try our best to use open source throughout our source code, our development and our operations. Here is where we stand currently.
 
-Open source tools: ghc, all haskell libraries, nixpkgs, centos, ubuntu, nixos, redoc/swagger, solr/openjdk, postgresql, nginx, vim, emacs, slurm
+Open source tools: ghc, all haskell libraries, nixpkgs, centos, ubuntu, nixos, redoc/swagger, solr/openjdk, postgresql, nginx, vim, emacs, slurm.
 
-Non-open source tools: runscope, katalon, github, jira, confluence, aws, macos, mailtrap, gmail, slack, google drive, skype, sublime
+Non-open source tools: runscope, katalon, github, jira, confluence, aws, macos, mailtrap, gmail, slack, google drive, skype, sublime.
 
 ## License
 
