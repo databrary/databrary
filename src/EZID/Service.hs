@@ -21,7 +21,7 @@ initEZID :: C.Config -> IO (Maybe EZID)
 initEZID conf = conf C.! "ns" `forM` \ns -> do
   unless ("doi:10." `BSC.isPrefixOf` ns) $
     fail "ezid.ns must be for DOIs"
-  req <- HC.parseRequest "http://localhost:3000"
+  req <- HC.parseRequest "http://ez.datacite.org"
   return $ EZID
     { ezidRequest = HC.applyBasicAuth (conf C.! "user") (conf C.! "pass") req
       { HC.requestHeaders = (hContentType, "text/plain") : HC.requestHeaders req
