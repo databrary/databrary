@@ -24,6 +24,7 @@ import qualified Data.Text.Encoding as TE
 import Data.Time.Clock (getCurrentTime)
 import qualified Network.HTTP.Client as HC
 import Network.HTTP.Types (methodGet, methodPut, methodPost)
+import Network.HTTP.Types.Status (statusCode)
 import Network.URI (URI)
 import qualified Text.XML.Light as XML
 
