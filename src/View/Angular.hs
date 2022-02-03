@@ -95,7 +95,7 @@ htmlAngular assetsVersion cssDeps jsDeps nojs reqCtx = H.docTypeHtml H.! ngAttri
       $ return ()
     H.script H.! HA.src "https://gitcdn.link/repo/leaflet-extras/leaflet-providers/master/leaflet-providers.js" 
       $ return ()
-    H.script H.! HA.src "https://gitcdn.link/repo/gilmore-lab/databrary-analytics/master/institutions-investigators/js/institutions.js"
+    H.script H.! HA.src "https://raw.githubusercontent.com/gilmore-lab/databrary-analytics/11fe54e69ce1e1ec2be9bdf801b23806dc0082ee/institutions-investigators/js/institutions.js"
       $ return ()
     H.preEscapedString $ "<main ng-view id=\"main\" class=\"main"
 #ifdef SANDBOX
