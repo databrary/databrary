@@ -4,7 +4,7 @@ set -eu
 echo "Manually running nix/install script, fixed to nix 2.0 currently"
 # curl https://nixos.org/nix/install | sh
 cd /tmp
-curl -o install-2.0 https://raw.githubusercontent.com/NixOS/nixos-homepage/master/nix/install-2.0
+curl -o install-2.0 https://releases.nixos.org/nix/nix-2.0/install
 chmod +x install-2.0
 sh ./install-2.0
 
