@@ -123,7 +123,7 @@ jsRoutes =
   , rt "\"zipSlot\":{method:\"GET\",route:function(int320,int321){return \"/volume/\"+int320+\"/slot/\"+int321+\"/zip/false\";}},"
   -- , jsRoute "zipSlot" (zipContainer False) (Just volume, container) --zip transcoded slot
   , rt "\"zipOrigSlot\":{method:\"GET\",route:function(int320,int321){return \"/volume/\"+int320+\"/slot/\"+int321+\"/zip/true\";}},"
-  -- , jsRoute "zipOrigSlot" (zipContainer True) (Just volume, container) --zip orignal slot
+  -- , jsRoute "zipOrigSlot" (zipContainer True) (Just volume, container) --zip original slot
   , rt "\"zipVolume\":{method:\"GET\",route:function(int320){return \"/volume/\"+int320+\"/zip/false\";}},"
   -- , jsRoute "zipVolume" (zipVolume False) (volume) -- zip volume full of transcoded assets
   , rt "\"zipOrigVolume\":{method:\"GET\",route:function(int320){return \"/volume/\"+int320+\"/zip/true\";}},"

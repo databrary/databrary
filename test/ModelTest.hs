@@ -165,7 +165,7 @@ test_5 = Test.stepsWithTransaction "test_5" $ \step cn2 -> do
 
 test_6 :: TestTree
 test_6 = Test.stepsWithTransaction "test_6" $ \step cn2 -> do
-    step "Given an affiliate (with high priviliges)"
+    step "Given an affiliate (with high privileges)"
     (aiAcct, aiCtxt) <- addAuthorizedInvestigatorWithInstitution' cn2
     affAcct <- addAffiliate aiCtxt (accountParty aiAcct) PermissionREAD PermissionADMIN
     gradAffAuth <- lookupSiteAuthNoIdent aiCtxt (accountEmail affAcct)
@@ -256,7 +256,7 @@ test_10 = Test.stepsWithTransaction "test_10" $ \step cn2 -> do
     step "When the lab A AI creates a public volume"
     -- TODO: should be lookup auth on rootParty
     createdVol <- runReaderT (addVolumeWithAccess aiAcct) aiCtxt -- partially shared, but effectively same as public
-    step "Then the lab B AI can't add volume acccess"
+    step "Then the lab B AI can't add volume access"
     -- FIXME: Hard to express properly with the confusion between permissions
     -- and roles.
     Just volForAI2 <- runReaderT (lookupVolume ((volumeId . volumeRow) createdVol)) aiCtxt2
@@ -653,7 +653,7 @@ test_register_volume_with_ezid = ignoreTest $ localOption (mkTimeout (15 * 10^(6
         bctx <- mkBackgroundContext ForEzid ist cn2
         mEzidWasUp <- runReaderT updateEZID bctx
         step "Then the volume will have a valid doi" -- TODO; and ezid will expose registered info somehow?
-        mEzidWasUp @?= Just True  -- Nothing = ezid not initialized; Just False = initalized, but down
+        mEzidWasUp @?= Just True  -- Nothing = ezid not initialized; Just False = initialized, but down
         Just _vol' <- runReaderT (lookupVolume ((volumeId . volumeRow) vol)) aiCtxt
         -- let Just doi = (volumeDOI . volumeRow) vol'
         -- TODO: check doi link causes a redirect to Location: http://databrary.org/volume/801 with the volume id matching above

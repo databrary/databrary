@@ -138,7 +138,7 @@ instance Show Result where
     $ showString "Result " . showsPrec 11 (responseStatus r)
 instance Exception Result
 
--- | Short circuit immediately, returning the given Reponse.
+-- | Short circuit immediately, returning the given Response.
 --
 -- FIXME: Rather than implementing this using exceptions, could we either use a
 -- left-biased Alternative or simply use a better procedural style?
@@ -150,7 +150,7 @@ result = liftIO . throwIO . Result
 unsafeResult :: Response -> a
 unsafeResult = throw . Result
 
--- | Run some action that may short circut using 'result' or 'unsafeResult'.
+-- | Run some action that may short circuit using 'result' or 'unsafeResult'.
 runResult :: IO Response -> IO Response
 runResult = handle (return . resultResponse)
 

@@ -69,7 +69,7 @@ formatRow :: Selector -- Format
 formatRow = selectColumns 'makeFormat "format" ["id", "mimetype", "extension", "name"]
 -}
 
--- | Harcoded list of all formats recognized by Databrary for uploading
+-- | Hardcoded list of all formats recognized by Databrary for uploading
 -- TODO: db coherence
 allFormats :: [Format]
 allFormats

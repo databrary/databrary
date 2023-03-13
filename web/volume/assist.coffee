@@ -147,7 +147,7 @@ app.directive 'volumeAssist', [
               form.mail.$setUnsubmitted()
               messages.addError
                 type: 'red'
-                body: 'An error occured sending the request; please try again'
+                body: 'An error occurred sending the request; please try again'
                 report: res
                 owner: form.mail
               return

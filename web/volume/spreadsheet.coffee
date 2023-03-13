@@ -307,7 +307,7 @@ app.directive 'spreadsheet', [
               Object.defineProperty @, v,
                 value: x
                 writable: true
-                configureable: true
+                configurable: true
                 enumerable: true
               return
 

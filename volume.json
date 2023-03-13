@@ -165,7 +165,7 @@
           {"$ref": "#/definitions/segment"},
           {"type": "string",
             "enum": ["auto"],
-            "description": "Automatically postioned immediately following previous positioned asset."
+            "description": "Automatically positioned immediately following previous positioned asset."
           }
         ]},
         "file": {"type": "string",

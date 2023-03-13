@@ -1,6 +1,6 @@
 ### Sign-Up | Log-In | Email Confirmation
 
-    In order Sign up for Databrary within your test envirionment, you will need to
+    In order Sign up for Databrary within your test environment, you will need to
     be able to receive the confirmation email.
 
     Emails have been configured to redirect to https://mailtrap.io/ (MailTrap), an

@@ -65,7 +65,7 @@ extractColumn hdr records applyDefault =
    . fmap (applyDefault . HMP.lookup hdr))
    records
 
--- similar to decodeByName with except make parser parameter explicity
+-- similar to decodeByName with except make parser parameter explicitly
 decodeCsvByNameWith :: (Csv.NamedRecord -> Csv.Parser a) -> BS.ByteString -> Either String (Csv.Header, Vector a)
 decodeCsvByNameWith parseNamedRecord' contents = do
     -- Csv.decodeByNameWith Csv.defaultDecodeOptions contents
