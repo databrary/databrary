@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "@flowjs/ng-flow": "2.7.1",
-    "angular": "~1.4",
+    "angular": "~1.8",
     "angular-route": "~1.4",
     "angular-ui-slider": "0.4.0",
     "autoprefixer-stylus": "^0.9.4",
