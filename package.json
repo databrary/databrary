@@ -14,7 +14,7 @@
     "jquery": "^1.12.3",
     "jquery-ui-dist": "^1.12.1",
     "jshint": "~2.8.0",
-    "lodash": "^3.0.0",
+    "lodash": "^4.17.19",
     "nib": "^1.1.2",
     "normalize.styl": "^3.0.0",
     "pivottable": "^2.0",
