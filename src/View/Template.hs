@@ -61,7 +61,7 @@ htmlAddress =
 htmlCopyrightTermsPrivacy :: H.Html
 htmlCopyrightTermsPrivacy =
   H.p H.! HA.class_ "footer-copyright" $ do
-    void "Copyright © 2014-2021"
+    void "Copyright © 2014-2023"
     void " | "
     H.a H.! HA.href "https://databrary.org/about/policies/terms.html" $ "Terms of Use"
     void " | "

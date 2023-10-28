@@ -59,9 +59,6 @@ htmlAngular assetsVersion cssDeps jsDeps nojs reqCtx = H.docTypeHtml H.! ngAttri
         H.! HA.href (versionedWebURL assetsVersion $ webFileRel css)
     H.link
       H.! HA.rel "stylesheet"
-      H.! HA.href "https://allfont.net/cache/css/lucida-sans-unicode.css"
-    H.link
-      H.! HA.rel "stylesheet"
       H.! HA.href "https://fonts.googleapis.com/css?family=Questrial"
     H.link
       H.! HA.rel "stylesheet"
