@@ -1,4 +1,4 @@
-# Databrary 
+# Databrary
 
 Want to help out? Please reach out via email, commenting on an issue, or whatever works for you. We have significant experience mentoring new developers and Haskell developers.
 
@@ -18,8 +18,9 @@ Accelerate the pace of sharing and reusing recorded, annotated video, to increas
 <img width="32%" src="http://databrary.github.io/databrary/screenshots/Screen Shot 2018-07-18 at 9.27.55 AM.png"> <img width="32%" src="http://databrary.github.io/databrary/screenshots/Screen Shot 2018-07-18 at 9.28.02 AM.png"> <img width="32%" src="http://databrary.github.io/databrary/screenshots/Screen Shot 2018-07-18 at 9.28.18 AM.png">
 
 <img width="32%" src="http://databrary.github.io/databrary/screenshots/Screen Shot 2018-07-18 at 9.28.48 AM.png"> <img width="32%" src="http://databrary.github.io/databrary/screenshots/Screen Shot 2018-07-18 at 9.29.01 AM.png">
- 
+
 Go for a test drive on http://dev1.databrary.org:8000/. We are excited to have your attention and interest.
+
 1. Login as test@databrary.org / unastan54
 2. Click on "Testarosa Tesla", in the upper right corner, and select "Create Volume"
 3. Select "No" at the bottom of the page and enter some text in boxes provided
@@ -27,9 +28,9 @@ Go for a test drive on http://dev1.databrary.org:8000/. We are excited to have y
 5. Click on "add folder", enter a test date, e.g. "01/02/2017"
 6. Scroll to the top of the page and click the "eye" icon, to switch to view mode
 
-Try browsing around a site with example data here: http://sandbox1.databrary.org:8000/.
+Try browsing around a site with example data here: http://sandbox1.databrary.org:8000/
 
-You can get an understanding of the full scope of features offered in our feature catalog ([pdf](http://databrary.github.io/databrary/Databrary_Feature_Catalog.pdf)). Some pages have changed since this catalog was produced. 
+You can get an understanding of the full scope of features offered in our feature catalog ([pdf](http://databrary.github.io/databrary/Databrary_Feature_Catalog.pdf)). Some pages have changed since this catalog was produced.
 
 ## Related Work (Open Source)
 
@@ -39,20 +40,20 @@ You can get an understanding of the full scope of features offered in our featur
 
 ## Testing, Requirements, Implementation Documentation
 
-|            | docs  |
-|------------|---|
-| functional | [docs](https://github.com/databrary/design/blob/master/overview.md) |
-| internal routes  | [<img src="https://img.shields.io/badge/redoc-generated-brightgreen.svg">](http://databrary.github.io/databrary/route-doc/#) |
-| front end  | [<img src="https://img.shields.io/badge/jsdoc-generated-brightgreen.svg">](http://databrary.github.io/databrary/frontend-doc/) |
-| back end   | [<img src="https://img.shields.io/badge/haddocks-generated-brightgreen.svg">](http://databrary.github.io/databrary/haddocks/) |
+|                 | docs                                                                                                                           |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| functional      | [docs](https://github.com/databrary/design/blob/master/overview.md)                                                            |
+| internal routes | [<img src="https://img.shields.io/badge/redoc-generated-brightgreen.svg">](http://databrary.github.io/databrary/route-doc/#)   |
+| front end       | [<img src="https://img.shields.io/badge/jsdoc-generated-brightgreen.svg">](http://databrary.github.io/databrary/frontend-doc/) |
+| back end        | [<img src="https://img.shields.io/badge/haddocks-generated-brightgreen.svg">](http://databrary.github.io/databrary/haddocks/)  |
 
-|                       | results | coverage |
-|-----------------------|---------|----------|
-| functional            | [<img src="https://img.shields.io/badge/tests-passed-brightgreen.svg">](http://databrary.github.io/databrary/Report.html)        | [<img src="https://img.shields.io/badge/coverage-37%25-yellow.svg">](http://databrary.github.io/databrary/coverage-comparison/katalon-coverage/hpc_index.html)          |
-| front end integration |         |          |
-| front end unit        |         |          |
-| back end integration  | [<img src="https://img.shields.io/badge/runscope-passed-brightgreen.svg">](https://www.runscope.com/radar/agq3bvszxaxe/b788db16-d63b-4ea9-ba98-5abc477dd03d/history/dac7e3ce-280d-4ade-90b1-260cb41614bf)        | [<img src="https://img.shields.io/badge/coverage-29%25-yellow.svg">](http://databrary.github.io/databrary/coverage-comparison/runscope/hpc_index.html)          |
-| back end unit         | [<img src="https://img.shields.io/badge/tests-passed-brightgreen.svg">](https://github.com/databrary/databrary/blob/gh-pages/databrary-1-discovered.log)        | [<img src="https://img.shields.io/badge/coverage-26%25-yellow.svg">](http://databrary.github.io/databrary/coverage/hpc_index.html)         |
+|                       | results                                                                                                                                                                                                   | coverage                                                                                                                                                       |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| functional            | [<img src="https://img.shields.io/badge/tests-passed-brightgreen.svg">](http://databrary.github.io/databrary/Report.html)                                                                                 | [<img src="https://img.shields.io/badge/coverage-37%25-yellow.svg">](http://databrary.github.io/databrary/coverage-comparison/katalon-coverage/hpc_index.html) |
+| front end integration |                                                                                                                                                                                                           |                                                                                                                                                                |
+| front end unit        |                                                                                                                                                                                                           |                                                                                                                                                                |
+| back end integration  | [<img src="https://img.shields.io/badge/runscope-passed-brightgreen.svg">](https://www.runscope.com/radar/agq3bvszxaxe/b788db16-d63b-4ea9-ba98-5abc477dd03d/history/dac7e3ce-280d-4ade-90b1-260cb41614bf) | [<img src="https://img.shields.io/badge/coverage-29%25-yellow.svg">](http://databrary.github.io/databrary/coverage-comparison/runscope/hpc_index.html)         |
+| back end unit         | [<img src="https://img.shields.io/badge/tests-passed-brightgreen.svg">](https://github.com/databrary/databrary/blob/gh-pages/databrary-1-discovered.log)                                                  | [<img src="https://img.shields.io/badge/coverage-26%25-yellow.svg">](http://databrary.github.io/databrary/coverage/hpc_index.html)                             |
 
 ## Upstream - Anticipating and Contributing
 
@@ -96,8 +97,8 @@ License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+along with this program. If not, see <https://www.gnu.org/licenses/>.
