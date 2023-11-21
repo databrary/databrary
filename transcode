@@ -4,7 +4,7 @@
 # It is also the SLURM script so is in fact run twice, once with arguments (up to the sbatch), once with variables.
 
 #SBATCH --nodes=1
-#SBATCH --mem=1024m 
+#SBATCH --mem=1536m 
 
 SLURM=$0
 if [[ $SLURM != /* ]] ; then
