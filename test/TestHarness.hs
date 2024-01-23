@@ -464,7 +464,7 @@ addAuthorizedInstitution adminCtxt = do
              pure created)
         adminCtxt
 
--- TODO: recieve expiration date (expiration dates might not be used...)  -- register as anon + approve as site admin
+-- TODO: receive expiration date (expiration dates might not be used...)  -- register as anon + approve as site admin
 addAuthorizedInvestigator :: TestContext -> Party -> IO Account
 addAuthorizedInvestigator adminCtxt instParty = do
     let ctxtNoIdent =

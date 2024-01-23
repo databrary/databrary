@@ -966,7 +966,7 @@ data PartyFilter = PartyFilter
   { partyFilterQuery :: Maybe String
     -- ^ pattern to compare first name, last name, and possibly email
   , partyFilterAuthorization :: Maybe Permission
-    -- ^ match on this permission level in acccessing the databrary site group's data
+    -- ^ match on this permission level in accessing the databrary site group's data
   , partyFilterInstitution :: Maybe Bool
     -- ^ either only include institutions (True) or
     -- only include human parties with active account (False)

@@ -19,7 +19,7 @@
             <label for="volWSess">Contains sessions</label>
           </div>
           <div class="search-filter-sub" ng-if="fields.container_top">
-            <span>Data collected betweeen</span><br/>
+            <span>Data collected between</span><br/>
             <div ui-slider="{range:true}" min="{{::years[0]}}" max="{{::years[1]}}" step="1" ng-model="fields.container_date"></div>
             <span ng-bind="fields.container_date[0]"></span>
             <span class="slider-right-label" ng-bind="fields.container_date[1]"></span>

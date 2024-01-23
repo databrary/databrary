@@ -16,7 +16,7 @@ vap AS (
        , aut.parent
        , aut.child
        , LEAST(acc.children,
-               -- Below might be a shorcut to approximate parent = group 0
+               -- Below might be a shortcut to approximate parent = group 0
                --   or group 1, since PUBLIC is used with group -1 and SHARED
                --   is used with group 0. Needs confirmation.
                CASE WHEN acc.children <= 'SHARED'

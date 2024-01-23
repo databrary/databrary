@@ -107,7 +107,7 @@ CREATE TYPE release AS ENUM (
 	'PRIVATE', 	-- no sharing beyond those with full access
 	'SHARED', 	-- restricted sharing to authorized users
 	'EXCERPTS', 	-- SHARED, but excerpts may be shown externally
-	'PUBLIC' 	-- shared publically with anyone
+	'PUBLIC' 	-- shared publicly with anyone
 );
 COMMENT ON TYPE release IS 'Levels at which participants or researchers may choose to share data.';
 

@@ -68,7 +68,7 @@ permissionParty
   => (Permission -> Maybe Access -> a) -- ^ Partially applied makeParty, ready to build full account or party
   -> Maybe Access -- ^ The direct authorization that the party/account being built may have authorized to the
                   -- viewing identity/user. This is only used by lookupAuthParty, which is only used in the
-                  -- context of retreiving a party for editing/viewing in isolation by the party controller actions
+                  -- context of retrieving a party for editing/viewing in isolation by the party controller actions
   -> Identity -- ^ The viewing identity / user which is trying to view or edit the party being retrieved.
   -> a -- ^ account or party
 permissionParty mkPartyOrAcct mGrantedAccessFromPartyToViewer viewingIdent =

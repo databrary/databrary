@@ -1,0 +1,4 @@
+[codespell]
+skip = .git,*.pdf,*.svg,synonyms.txt,*.nix
+# various variables etc found used in the code etc
+ignore-words-list = dne,fo,isnt,ist,nd,sav,siz,te,tood,vas,weill,wher

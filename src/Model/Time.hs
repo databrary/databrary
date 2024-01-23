@@ -15,7 +15,7 @@ import Data.Time (Day(..), UTCTime(..), DiffTime, toGregorian, fromGregorian)
 import Data.Time.Format (FormatTime(..), formatTime, dateFmt)
 import Language.Haskell.TH.Lift (deriveLiftMany)
 
--- | Synomym for a Day
+-- | Synonym for a Day
 type Date = Day
 -- | Synonym for a UTCTime
 type Timestamp = UTCTime

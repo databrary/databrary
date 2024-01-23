@@ -46,7 +46,7 @@ newtype MailHost = MailHost String
 -- | Sever port for smtp mail delivery
 newtype MailPort = MailPort Int
 
--- | Acount username for smtp mail delivery
+-- | Account username for smtp mail delivery
 newtype MailUser = MailUser String
 
 -- | Account password for smtp mail delivery

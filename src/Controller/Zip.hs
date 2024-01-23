@@ -173,7 +173,7 @@ getVolumeInfo vi = do
   _ <- maybeAction (if volumeIsPublicRestricted v then Nothing else Just ()) -- block if restricted
   s <- peeks requestIdSet
   -- let isMember = maybe (const False) (\c -> RS.member (containerId $ containerRow $ slotContainer $ c))
-  -- non-exhaustive pattern found here ...v , implment in case of Nothing (Keep in mind originalAssets will not have containers, or Volumes)
+  -- non-exhaustive pattern found here ...v , implement in case of Nothing (Keep in mind originalAssets will not have containers, or Volumes)
   a <- filter (\a@AssetSlot{ assetSlot = Just c } -> checkAsset a && RS.member (containerId $ containerRow $ slotContainer c) s) <$> lookupVolumeAssetSlots v False
   return (v, s, a)
 

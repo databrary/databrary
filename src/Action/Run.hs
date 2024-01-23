@@ -134,7 +134,7 @@ actionApp service (Action needsAuth act) waiReq waiSend =
                   (Wai.responseHeaders waiResponse')
               else waiResponse'
 
--- | Special-purpose context for determing the user's identity. We don't need
+-- | Special-purpose context for determining the user's identity. We don't need
 -- the full Handler for that, and since this is sensitive work, we don't want to
 -- just cheat and use it anyway.
 data IdContext = IdContext
@@ -157,7 +157,7 @@ fetchIdent
     -> NeedsAuthentication
     -- ^ Whether or not to actually do the lookup.
     --
-    -- FIXME: This seems like an unncessary complication.
+    -- FIXME: This seems like an unnecessary complication.
     -> ActionContextM Identity
 fetchIdent sec con waiReq = \case
     NeedsAuthentication ->

@@ -139,7 +139,7 @@ app.directive 'partyEditNotifications', [
             $scope.partyEditNotificationsForm.$setUnsubmitted()
             messages.addError
               type: 'red'
-              body: 'An error occured saving your notification preferences'
+              body: 'An error occurred saving your notification preferences'
               report: res
             getDelivery(n)
             return
