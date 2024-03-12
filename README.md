@@ -88,7 +88,7 @@ Non-open source tools: runscope, katalon, github, jira, confluence, aws, macos, 
 
 ## License
 
-Copyright (C) 2013-2023 New York University
+Copyright (C) 2013-2024 New York University
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
