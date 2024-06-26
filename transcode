@@ -105,6 +105,8 @@ else
     rm -f "$id.args"
 fi
 
+url=${url//http:/https:}
+
 # sha1 arg is split to work around weird HPC error:
 curl -sSk --data-urlencode "pid=$PID" --data-urlencode "res=$r" ${sha1:+--data-urlencode} ${sha1:+"sha1=${sha1%% *}"} --data-urlencode "log@$LOG" "$url"
 
